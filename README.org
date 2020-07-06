@@ -1,10 +1,10 @@
 #+author: conao3
 #+date: <2020-03-20 Fri>
 
-[[https://github.com/conao3/object-detect.py.el][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/object-detect.py.el.png]]
-[[https://github.com/conao3/object-detect.py.el/blob/master/LICENSE][https://img.shields.io/github/license/conao3/object-detect.py.el.svg?style=flat-square]]
-[[https://github.com/conao3/object-detect.py.el/releases][https://img.shields.io/github/tag/conao3/object-detect.py.el.svg?style=flat-square]]
-[[https://github.com/conao3/object-detect.py.el/actions][https://img.shields.io/badge/patreon-become%20a%20patron-orange.svg?logo=patreon&style=flat-square]]
+[[https://github.com/conao3/object-segment.py][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/object-segment.py.png]]
+[[https://github.com/conao3/object-segment.py/blob/master/LICENSE][https://img.shields.io/github/license/conao3/object-segment.py.svg?style=flat-square]]
+[[https://github.com/conao3/object-segment.py/releases][https://img.shields.io/github/tag/conao3/object-segment.py.svg?style=flat-square]]
+[[https://github.com/conao3/object-segment.py/actions][https://img.shields.io/badge/patreon-become%20a%20patron-orange.svg?logo=patreon&style=flat-square]]
 [[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
 [[https://conao3-support.slack.com/join/shared_invite/enQtNjUzMDMxODcyMjE1LWUwMjhiNTU3Yjk3ODIwNzAxMTgwOTkxNmJiN2M4OTZkMWY0NjI4ZTg4MTVlNzcwNDY2ZjVjYmRiZmJjZDU4MDE][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
@@ -48,7 +48,7 @@ We welcome PR!
 #+begin_example
   General Public License Version 3 (GPLv3)
   Copyright (c) Naoya Yamashita - https://conao3.com
-  https://github.com/conao3/object-detect.py.el/blob/master/LICENSE
+  https://github.com/conao3/object-segment.py/blob/master/LICENSE
 #+end_example
 
 ** Author
