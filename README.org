@@ -1,55 +1,75 @@
+#+title: object-segment.py
 #+author: conao3
-#+date: <2020-03-20 Fri>
 
-[[https://github.com/conao3/object-segment.py][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/object-segment.py.png]]
+Instance segmentation with PyTorch using Mask R-CNN.
+
 [[https://github.com/conao3/object-segment.py/blob/master/LICENSE][https://img.shields.io/github/license/conao3/object-segment.py.svg?style=flat-square]]
 [[https://github.com/conao3/object-segment.py/releases][https://img.shields.io/github/tag/conao3/object-segment.py.svg?style=flat-square]]
-[[https://github.com/conao3/object-segment.py/actions][https://img.shields.io/badge/patreon-become%20a%20patron-orange.svg?logo=patreon&style=flat-square]]
-[[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
-[[https://conao3-support.slack.com/join/shared_invite/enQtNjUzMDMxODcyMjE1LWUwMjhiNTU3Yjk3ODIwNzAxMTgwOTkxNmJiN2M4OTZkMWY0NjI4ZTg4MTVlNzcwNDY2ZjVjYmRiZmJjZDU4MDE][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
-* Table of Contents
-- [[#description][Description]]
-- [[#install][Install]]
-- [[#usage][Usage]]
-- [[#information][Information]]
-  - [[#community][Community]]
-  - [[#contribution][Contribution]]
-  - [[#license][License]]
-  - [[#author][Author]]
+* Overview
 
-* Description
-Object detection using pytorch.
+This project demonstrates instance segmentation using PyTorch and the Mask R-CNN model with a ResNet-50 FPN backbone. It trains on the Penn-Fudan Pedestrian dataset to detect and segment pedestrians in images.
 
-* Install
-This snippet requires Python3.
+* Features
 
-* Usage
+- Pre-trained Mask R-CNN model fine-tuned for pedestrian detection
+- Instance-level segmentation with bounding boxes and masks
+- Data augmentation with random horizontal flipping
+- COCO-style evaluation metrics
+
+* Requirements
+
+- Python 3.x
+- PyTorch
+- torchvision
+- NumPy
+- PIL
+
+* Installation
+
+Clone the repository:
+
 #+begin_src shell
-  # download the Penn-Fudan dataset
-  wget https://www.cis.upenn.edu/~jshi/ped_html/PennFudanPed.zip .
-  # extract it in the current folder
-  unzip PennFudanPed.zip
-
-  ./object-segment.py
+git clone https://github.com/conao3/object-segment.py.git
+cd object-segment.py
 #+end_src
 
-* Information
-** Community
-All feedback and suggestions are welcome!
+* Usage
 
-You can use github issues, but you can also use [[https://conao3-support.slack.com/join/shared_invite/enQtNjUzMDMxODcyMjE1LWUwMjhiNTU3Yjk3ODIwNzAxMTgwOTkxNmJiN2M4OTZkMWY0NjI4ZTg4MTVlNzcwNDY2ZjVjYmRiZmJjZDU4MDE][Slack]]
-if you want a more casual conversation.
+1. Download and extract the Penn-Fudan dataset:
 
-** Contribution
-We welcome PR!
+#+begin_src shell
+wget https://www.cis.upenn.edu/~jshi/ped_html/PennFudanPed.zip
+unzip PennFudanPed.zip
+#+end_src
 
-** License
-#+begin_example
-  General Public License Version 3 (GPLv3)
-  Copyright (c) Naoya Yamashita - https://conao3.com
-  https://github.com/conao3/object-segment.py/blob/master/LICENSE
-#+end_example
+2. Run the training script:
 
-** Author
-- Naoya Yamashita ([[https://github.com/conao3][conao3]])
+#+begin_src shell
+./object-segment.py
+#+end_src
+
+The script will train for 10 epochs and display segmentation results on a test image.
+
+* Project Structure
+
+| File              | Description                        |
+|-------------------+------------------------------------|
+| object-segment.py | Main training and inference script |
+| engine.py         | Training and evaluation loops      |
+| transforms.py     | Data augmentation transforms       |
+| coco_utils.py     | COCO dataset utilities             |
+| coco_eval.py      | COCO evaluation metrics            |
+| utils.py          | General utility functions          |
+
+* Contributing
+
+Contributions are welcome. Feel free to open issues or submit pull requests.
+
+* License
+
+MIT License. See [[https://github.com/conao3/object-segment.py/blob/master/LICENSE][LICENSE]] for details.
+
+* Author
+
+Naoya Yamashita ([[https://github.com/conao3][conao3]])
